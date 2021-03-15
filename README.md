@@ -1,4 +1,4 @@
-# Comparison on RetinaNet and Faster R-CNN
+# Face mask detection demo with RetinaNet
 
 - `mask-detection-app.py`: main file which is executed with `streamlit run mask-detection-app.py`
 
