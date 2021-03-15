@@ -1,16 +1,12 @@
 import streamlit as st
 from PIL import Image
-import torchvision
 import data
 from retinanet import make_prediction, plot_image_from_output
 import numpy as np
 import io
 
 def figure_to_array(fig):
-    """
-    plt.figure를 RGBA로 변환(layer가 4개)
-    shape: height, width, layer
-    """
+
     fig.canvas.draw()
     return np.array(fig.canvas.renderer._renderer)
 
