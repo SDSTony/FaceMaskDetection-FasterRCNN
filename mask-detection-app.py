@@ -10,13 +10,13 @@ import data
 from input import image_input
 
 """
-# Detecting medical masks with RetinaNet
+# Detecting medical masks with FasterRCNN based on MobileNetv3
 """
 
-model_retina = retinanet.get_model()
+model = retinanet.get_model()
 
 device = torch.device('cpu')
-model_retina.to(device)
+model.to(device)
 
 content_name = st.sidebar.selectbox("Choose a sample image: ", data.content_images_name)
 content_file = data.content_images_dict[content_name]
@@ -36,7 +36,7 @@ with left_column:
 with right_column:
     st.write("result")
     start = time.time()
-    image_input(model_retina, content)
+    image_input(model, content)
     time_taken = f"Time taken for prediction: {round(time.time() - start, 2)} seconds"
     st.write(time_taken)
 

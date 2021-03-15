@@ -1,17 +1,27 @@
 import torch
 import torchvision
 import torchvision.transforms as transforms
+from torchvision.models.detection.faster_rcnn import FastRCNNPredictor
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import streamlit as st
 from PIL import Image
 
-@st.cache
-def get_model():
-    
-    model = torchvision.models.detection.retinanet_resnet50_fpn(num_classes=3, pretrained=False, pretrained_backbone=True)
 
-    model.load_state_dict(torch.load('models/retina_fp16.pt', map_location=torch.device('cpu')))
+# def get_model():
+    
+#     model = torchvision.models.detection.retinanet_resnet50_fpn(num_classes=3, pretrained=False, pretrained_backbone=True)
+
+#     model.load_state_dict(torch.load('models/retina_fp16.pt', map_location=torch.device('cpu')))
+    
+#     return model
+
+def get_model():
+  
+    model = torchvision.models.detection.fasterrcnn_mobilenet_v3_large_320_fpn(pretrained=True)
+    in_features = model.roi_heads.box_predictor.cls_score.in_features
+    model.roi_heads.box_predictor = FastRCNNPredictor(in_features, num_classes=4)
+    model.load_state_dict(torch.load('models/mobilenet-fasterrcnn_10.pt', map_location=torch.device('cpu')))
     
     return model
 
@@ -25,10 +35,10 @@ def plot_image_from_output(img, annotation):
     for idx in range(len(annotation["boxes"])):
         xmin, ymin, xmax, ymax = annotation["boxes"][idx]
 
-        if annotation['labels'][idx] == 0 :
+        if annotation['labels'][idx] == 1 :
             rect = patches.Rectangle((xmin,ymin),(xmax-xmin),(ymax-ymin),linewidth=2,edgecolor='r',facecolor='none')
         
-        elif annotation['labels'][idx] == 1 :
+        elif annotation['labels'][idx] == 2 :
             
             rect = patches.Rectangle((xmin,ymin),(xmax-xmin),(ymax-ymin),linewidth=2,edgecolor='g',facecolor='none')
             
