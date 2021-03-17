@@ -1,5 +1,7 @@
 # Face mask detection demo with RetinaNet
 
+[![Heroku App Status](https://heroku-shields.herokuapp.com/FaceMaskDetection-RetinaNet)](https://FaceMaskDetection-RetinaNet.herokuapp.com)
+
 - `mask-detection-app.py`: main file which is executed with `streamlit run mask-detection-app.py`
 
 - `input.py`: algorithm for predicting image input files, similar to forward function in PyTorch
