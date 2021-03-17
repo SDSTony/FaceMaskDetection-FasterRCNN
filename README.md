@@ -1,6 +1,7 @@
 # Face mask detection demo with RetinaNet
 
-[![Heroku App Status](https://heroku-shields.herokuapp.com/FaceMaskDetection-RetinaNet)](https://FaceMaskDetection-RetinaNet.herokuapp.com)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://FaceMaskDetection-RetinaNet.herokuapp.com)
+
 
 - `mask-detection-app.py`: main file which is executed with `streamlit run mask-detection-app.py`
 
