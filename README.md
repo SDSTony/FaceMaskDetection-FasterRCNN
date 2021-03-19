@@ -1,4 +1,4 @@
-# Face mask detection demo with RetinaNet
+# Face mask detection demo with FasterRCNN (backbone w/ MobileNetV3)
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://FaceMaskDetection-RetinaNet.herokuapp.com)
 
