@@ -1,6 +1,7 @@
 # Face mask detection demo with FasterRCNN (backbone w/ MobileNetV3)
 
-[![Open in Streamlit](https://share.streamlit.io/sdstony/facemaskdetection-fasterrcnn/main/mask-detection-app.py)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/sdstony/facemaskdetection-fasterrcnn/main/mask-detection-app.py)
+
 
 
 - `mask-detection-app.py`: main file which is executed with `streamlit run mask-detection-app.py`
