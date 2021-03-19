@@ -1,5 +1,9 @@
+# python 3.6 for heroku
+# https://download.pytorch.org/whl/cpu/torch-1.8.0%2Bcpu-cp36-cp36m-linux_x86_64.whl
+# https://download.pytorch.org/whl/cpu/torchvision-0.9.0%2Bcpu-cp36-cp36m-linux_x86_64.whl
+# python 3.7 for streamlit sharing
+https://download.pytorch.org/whl/cpu/torch-1.8.0%2Bcpu-cp37-cp37m-linux_x86_64.whl
+https://download.pytorch.org/whl/cpu/torchvision-0.9.0%2Bcpu-cp37-cp37m-linux_x86_64.whl
 streamlit==0.78.0
 numpy==1.19.2
-https://download.pytorch.org/whl/cpu/torch-1.8.0%2Bcpu-cp36-cp36m-linux_x86_64.whl
-https://download.pytorch.org/whl/cpu/torchvision-0.9.0%2Bcpu-cp36-cp36m-linux_x86_64.whl
 matplotlib==3.3.3
