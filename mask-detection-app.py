@@ -5,7 +5,7 @@ import time
 from PIL import Image
 import torchvision
 
-import retinanet
+import ODmodel
 import data
 from input import image_input
 
@@ -13,7 +13,7 @@ from input import image_input
 # Detecting medical masks with FasterRCNN based on MobileNetv3
 """
 
-model = retinanet.get_model()
+model = ODmodel.get_model()
 
 device = torch.device('cpu')
 model.to(device)

@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 import data
-from retinanet import make_prediction, plot_image_from_output
+from ODmodel import make_prediction, plot_image_from_output
 import numpy as np
 import io
 
